@@ -14,7 +14,7 @@ public class Auto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private short farbe;
+    private String farbe;
 
     private int hubraum;
 
