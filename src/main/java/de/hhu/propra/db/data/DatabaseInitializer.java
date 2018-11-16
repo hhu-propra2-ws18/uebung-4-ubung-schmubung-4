@@ -1,11 +1,17 @@
 package de.hhu.propra.db.data;
 
+import com.github.javafaker.Faker;
+import de.hhu.propra.db.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Component
 public class DatabaseInitializer implements ServletContextInitializer{
