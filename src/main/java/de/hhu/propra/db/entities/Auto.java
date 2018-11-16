@@ -1,20 +1,23 @@
 package de.hhu.propra.db.entities;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Data;
-
-@Data
+@Data // Lombok - Generiert Getter, Setter, toString, ...
 @Entity
-public class Auto{
-
+public class Auto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	private String marke;
-	private String farbe;
-	private int hubraum;
+    private int id;
+
+    private short farbe;
+
+    private int hubraum;
+
+    private String marke;
+
 }
