@@ -32,6 +32,16 @@
             </ul>
         </td>
     </tr>
+    <tr th:each="kunde: ${allKunden}">
+        <td th:text="${kunde.name}">Kunde</td>
+        <td th:text="${kunde.adresse.strasse}"></td>
+        <td th:text="${kunde.adresse.plz}"></td>
+        <td>
+            <ul th:each="auto: kunde.autos">
+                <li><p th:text="${auto.marke}+${auto.farbe}+${auto.hubraum }"></p></li>
+            </ul>
+        </td>
+    </tr>
     </tbody>
 </table>
 </body>
